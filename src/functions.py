@@ -5,7 +5,7 @@ import os
 
 
 def load_data():
-    data = pd.read_csv(r'data\supermarket_sales.csv')
+    data = pd.read_csv('supermarket_sales.csv')
     data['Date'] = pd.to_datetime(data['Date'])
     return data
 
@@ -29,5 +29,3 @@ def plot_sales_over_time(data):
     plt.tight_layout()
     return plt
 
-import os
-print(os.listdir('data'))
