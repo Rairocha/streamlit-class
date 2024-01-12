@@ -1,10 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import os
 
 @st.cache
 def load_data():
-    data = pd.read_csv('https://raw.githubusercontent.com/data-bootcamp-v4/data/main/supermarket_sales.csv')
+    data = pd.read_csv(r'data\supermarket_sales.csv')
     data['Date'] = pd.to_datetime(data['Date'])
     return data
 
