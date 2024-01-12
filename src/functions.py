@@ -5,7 +5,7 @@ import os
 
 
 def load_data():
-    data = pd.read_csv('supermarket_sales.csv')
+    data = pd.read_csv('data/supermarket_sales.csv')
     data['Date'] = pd.to_datetime(data['Date'])
     return data
 
